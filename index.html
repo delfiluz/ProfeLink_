@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Profe-Link"
+        content="Descubrí ProfeLink, la app ideal para encontrar profesores particulares según tus necesidades.">
+    <title>ProfeLink - Encuentra tu profesor ideal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            width: 1500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 160px;
+            background-image: url(img/fondo\ 8.png);
+        }
+
+        .imagen {
+            margin-bottom: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .imagen:hover {
+            transform: scale(1.1);
+        }
+
+        .contenedor1 {
+            width: 90%;
+            max-width: 1200px;
+            margin: 10px auto;
+            margin-right: 100px;
+            padding-top: 180px;
+            color: rgb(255, 255, 255);
+        }
+
+        .contenedor1 h2 {
+            font-size: 30px;
+        }
+
+        .contenedor2 {
+            width: 90%;
+            max-width: 1200px;
+            margin: 10px auto;
+            margin-left: 150px;
+            padding-top: 150px;
+
+        }
+
+        .contenedor3 {
+            width: 90%;
+            max-width: 1200px;
+            margin: 10px auto;
+            margin-right: 20px;
+
+
+        }
+
+
+        .cabeza {
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #f4f4f4;
+            position: fixed;
+            z-index: 300;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #9900ff;
+            padding: 30px;
+            height: 40px;
+
+        }
+
+        .cabeza h2 {
+            font-size: 13px;
+        }
+
+        nav {
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+
+        nav ul li {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12pt;
+            margin-right: 10px;
+        }
+
+        #nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 11pt;
+
+        }
+
+        #nav ul li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #9900ff;
+        }
+
+        .Ofrecemos {
+            top: 20px;
+            padding: 40px;
+
+        }
+
+        .Ofrecemos h2 {
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .Ofrecemos-lista {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .OfrecemosTexto {
+            text-align: center;
+        }
+
+        .Ofrecemos {
+            text-align: center;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .Ofrecemos:hover {
+            transform: scale(1.1);
+
+        }
+
+        .Ofrecemos img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .Ofrecemos h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .Ofrecemos p {
+            color: #ccc;
+        }
+
+
+        .Ofrecemos h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .Opiniones {
+            padding: 40px;
+            text-align: center;
+            color: #ffffff;
+            padding-top: 30px;
+            margin-left: 120px;
+
+        }
+
+        .Opiniones h2 {
+            color: #9900ff;
+        }
+
+        .Opiniones {
+            color: #9900ff;
+        }
+
+        .Opiniones span {
+            font-style: italic;
+            color: #9900ff;
+            color: #9900ff;
+        }
+
+        .descargar {
+            width: 400px;
+            height: 200px;
+            background: #c7c4ee8c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 15px;
+            margin-left: 580px;
+            margin-bottom: 60px;
+        }
+
+        .footer {
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            max-width: 500%;
+            margin: 0;
+
+        }
+
+
+        .linksredes a {
+            color: #29b5cc;
+            margin: 0 5px;
+        }
+
+        .linksredes a:hover {
+            text-decoration: underline;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .Nombre h1 {
+            font-size: 80px;
+            color: #9900ff;
+        }
+
+        .Nombre h2 {
+            font-size: 30px;
+        }
+
+        .texto {
+            color: #ffffff;
+            margin-left: 0px;
+        }
+
+        .imagen {
+            text-align: right;
+        }
+
+        .imagen img {
+            max-width: 150%;
+            height: auto;
+        }
+
+        body {
+            background-color: rgb(255, 240, 212);
+        }
+
+        h4 {
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slider {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .Preguntas {
+            padding-top: 80px;
+            margin-left: 100px;
+        }
+
+        .slider section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: #29b5cc;
+            box-shadow: 0 5px 10px #2f312c8e;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+            font-size: 15pt;
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 8px;
+        }
+
+        .slider section:nth-child(2) {
+            background-color: #9900ff;
+        }
+
+        .slider section:nth-child(3) {
+            background-color: #ecadff;
+        }
+
+        .slick-next:before,
+        .slick-prev:before {
+            color: #ffffff;
+        }
+
+        .slider h5 {
+            margin-top: 0px;
+        }
+
+        .btn-ayuda {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #9900ff;
+            color: white;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn-ayuda:hover {
+            background-color: #ecadff;
+            transform: scale(1.1);
+        }
+
+        .redes {
+            color: #ffffff;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1500px;
+            height: 20px;
+            padding-top: 10px;
+        }
+
+        .redes h2 {
+            color: rgb(255, 255, 255);
+            margin-right: 0px;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 0px;
+            margin-left: 50px;
+
+        }
+
+        .contenedor-opiniones {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .contenedor-opiniones h2 {
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .opinion {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .opinion p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .opinion span {
+            font-size: 14px;
+            color: #777;
+            font-style: italic;
+        }
+
+        .descargar {
+            background: linear-gradient(90deg, #9900ff, #ecadff);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+        }
+
+        .descargar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .botones-descarga {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-descarga {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-descarga:hover {
+            background-color: #222;
+        }
+
+        .pie-pagina {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .redes-sociales a {
+            color: #29b5cc;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .redes-sociales a:hover {
+            color: #ecadff;
+        }
+
+        .pie-pagina p {
+            font-size: 12px;
+            margin-top: 10px;
+            color: #aaa;
+        }
+    </style>
+
+<body>
+    <a href="#ayuda" class="btn-ayuda">Ayuda</a>
+
+    <header>
+        <section class="cabeza">Profelink
+            <section class="nav">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#margenOfrecemos">Ofrecemos</a></li>
+                        <li><a href="#margenDescarga">Descarga aquí</a></li>
+                        <li><a href="#margenContactate">Contactate</a></li>
+
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </header>
+
+    <section class="Nombre">
+        <div class="flex-container">
+            <div class="texto">
+                <h1>ProfeLink</h1>
+                <h2>La app ideal para encontrar profesores <br> particulares según tus necesidades.</h2>
+            </div>
+            <div class="imagen">
+                <img src="img/celulares.png" alt="demostración">
+            </div>
+        </div>
+    </section>
+    <section class="OfrecemosTexto"><a id="margenOfrecemos"></a>
+        <div class="contenedor1">
+            <h2>¿Por qué elegir ProfeLink?</h2>
+            <div class="Ofrecemos-lista">
+                <div class="Ofrecemos">
+                    <img src="img/clases.png" alt="Clases personalizadas">
+                    <h3>Clases personalizadas</h3>
+                    <p>Adaptadas a tus tiempos y objetivos.</p>
+                </div>
+                <div class="Ofrecemos">
+                    <img src="img/virtual.png" alt="A domicilio o virtual">
+                    <h3>A domicilio o virtual</h3>
+                    <p>Elegí la modalidad que más te convenga.</p>
+                </div>
+                <div class="Ofrecemos">
+                    <img src="img/precio.png" alt="Precios accesibles">
+                    <h3>Precios accesibles</h3>
+                    <p>Profesores de calidad al alcance de todos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Preguntas">
+        <h4>Preguntas frecuentes</h4>
+        <div class="slider">
+            <section>
+                <h5>Es gratis, o paga?<br><br>
+                    La descarga es totalmente gratis! y el pago al profesor se arregla con el/ella dentro de la
+                    misma app!!!
+                </h5>
+            </section>
+            <section>
+                <h5>Cómo puedo saber si hay cerca de mi zona?<br><br>
+                    Podes entrar desde tu perfil, ir a configuración y privacidad, luego entras a ubicación y podes
+                    investigar desde ahí!
+                </h5>
+            </section>
+            <section>
+                <h5>Puedo hacer clase virtual?<br><br>
+                    si! tenemos filtros en la búsqueda donde podes buscar profesores presenciales y virtuales según
+                    la materia correspondiente!</h5>
+            </section>
+        </div>
+    </section>
+    <section class="Opiniones">
+
+        <div class="contenedor-opiniones">
+            <h2>Lo que dicen nuestros usuarios</h2>
+            <div class="opinion">
+                <p>"ProfeLink me ayudó a encontrar un profe de matemáticas excelente. ¡Recomendadísimo!"</p>
+                <span>- Sofía, estudiante universitaria</span>
+            </div>
+            <div class="opinion">
+                <p>"Gracias a ProfeLink, encontré un profesor de inglés que se ajusta a mi nivel y horarios."</p>
+                <span>- Martín, profesional independiente</span>
+            </div>
+            <div class="opinion">
+                <p>"La plataforma es súper fácil de usar, y los profesores son de calidad. ¡Un 10!"</p>
+                <span>- Laura, mamá de secundaria</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="descargar"><a id="margenDescarga"></a>
+        <div class="contenedor3">
+            <h2>¿Listo para empezar?</h2>
+            <p>Descargá ProfeLink y conectate con los mejores profesores ahora mismo.</p>
+            <a href="https://www.figma.com/proto/IYiIxStPiGQNCoqlWSH3yo/APP-PROFESORES-PARTICULARES?node-id=166-1347&t=64ZX1Da7PQG9TPLS-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=326%3A2367&show-proto-sidebar=1"
+                class="btn btn-cta" target="_blank">Descargar gratis</a>
+        </div>
+    </section>
+    <section>
+        <div class="redes">
+            <h2>Creada por un grupo de estudiantes universitarios, los cuales decidieron ayudar al resto del público
+                para que puedan afrontar las clases/materias que se les dificulta. Somos:
+                <a href="https://www.instagram.com/delfiluzv_/" target="_blank">@delfiluzv_</a>
+                <a href="https://www.instagram.com/fran_ghiretti/" target="_blank">@fran_ghiretti</a>
+                <a href="https://www.instagram.com/ludmiaguirre._/" target="_blank">@ludmiaguirre</a>
+            </h2>
+        </div>
+    </section>
+        <footer class="footer"><a id="margenContactate"></a>
+            <div class="contenedor">
+
+                <div class="linksredes">
+                    <p>Seguinos en nuestras redes:</p>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <p>&copy; 2024 ProfeLink. Todos los derechos reservados.</p>
+                </div>
+            </div>
+
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $(".slider").slick({
+                        dots: true,
+                        infinite: true,
+                        speed: 500,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        autoplay: true,
+                        autoplaySpeed: 3000,
+                        arrows: true,
+                    });
+                });
+
+            </script>
+        </footer>
+</body>
+
+</html>
